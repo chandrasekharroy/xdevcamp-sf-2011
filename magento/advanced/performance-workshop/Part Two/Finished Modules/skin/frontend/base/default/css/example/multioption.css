@@ -1,0 +1,20 @@
+
+/*
+ * Styling for the Example_MultiOptionCart configurable product view page
+ */
+
+#multioption {
+    width: 400px;
+}
+
+#multioption th {
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.multioption-add-to-cart {
+    padding-bottom: 15px;
+}
+.multioption-add-to-cart button{
+    float: right;
+}

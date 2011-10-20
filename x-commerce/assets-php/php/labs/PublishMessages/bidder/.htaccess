@@ -1,0 +1,6 @@
+RewriteEngine   On
+ 
+RewriteBase /bidder
+RewriteRule     ^makeBid$ Bidder.php    [L]
+RewriteRule ^[^\.]*$    AuctionConsole.php
+

@@ -1,0 +1,90 @@
+UL.productList LI {
+	
+}
+UL.categoryList UL.productList LI {
+	
+}
+#searchAgainForm INPUT#kw {
+	POSITION: relative; TOP: 5px
+}
+.addtowishlistLink {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 20px; BACKGROUND: url(../images/star.gif) no-repeat 0px 1px; PADDING-BOTTOM: 6px; PADDING-TOP: 2px
+}
+.emailafriendLink {
+	BACKGROUND: url(../images/emailfriend.gif) no-repeat 0px 3px; HEIGHT: 16px
+}
+DIV.mainNavContainer UL UL LI A {
+	PADDING-TOP: 3px! important
+}
+.itemnumber {
+	PADDING-LEFT: 1px! important
+}
+.ACPicker {
+	MARGIN-TOP: 5px! important
+}
+#colorCMBox {
+	TOP: -5px! important
+}
+#colorCMBox SPAN#singleColor {
+	POSITION: relative; TOP: 0px! important
+}
+#sizeCMBox {
+	POSITION: relative; TOP: 0px! important
+}
+#sizeCMBox SPAN#singleSize {
+	TOP: -5px! important
+}
+#sizeCMBox SELECT {
+	POSITION: relative; TOP: -5px
+}
+#qtyCMBox {
+	POSITION: relative; TOP: -5px! important
+}
+#linkAddToShoppingBag {
+	PADDING-BOTTOM: 6px! important
+}
+#searchPage UL.productList {
+	MARGIN-TOP: 3px
+}
+#searchSort SELECT {
+	POSITION: relative; TOP: 3px
+}
+INPUT#kw {
+	MARGIN-TOP: -1px! important; FONT-SIZE: 11px! important; WIDTH: 88px! important; HEIGHT: 12px! important
+}
+DIV#frmemail INPUT {
+	MARGIN-TOP: -1px! important; WIDTH: 92px! important
+}
+.copyFrame#storeLocatorPageV2 .frmField {
+	MARGIN-TOP: 1px! important
+}
+.copyFrame#storeLocatorPageV2 #SLCityState {
+	MARGIN-TOP: 5px! important
+}
+.copyFrame#storeLocatorPageV2 .alertBorder#SLUPostalCode {
+	PADDING-RIGHT: 1px; PADDING-LEFT: 1px; PADDING-BOTTOM: 2px; PADDING-TOP: 0px; TOP: 1px
+}
+.copyFrame#storeLocatorPageV2 .alertBorder#SLCPostalCode {
+	PADDING-RIGHT: 1px; PADDING-LEFT: 1px; PADDING-BOTTOM: 2px; PADDING-TOP: 0px; TOP: 1px
+}
+.copyFrame#storeLocatorPageV2 .alertBorder#SLUPostalCode INPUT {
+	POSITION: relative; TOP: 1px
+}
+.copyFrame#storeLocatorPageV2 .alertBorder#SLCPostalCode INPUT {
+	POSITION: relative; TOP: 1px
+}
+.checkoutPanels TD.leftPanel {
+	WIDTH: 585px! important
+}
+DIV#checkout2davisCart TABLE#cartItems TBODY TR TD#cartMainInfo TABLE.proceed-to-checkout TBODY TR TD#buttonBox TABLE.checkoutTable TBODY TR TD TABLE.checkoutButtons TBODY TR TD.colOr {
+	WHITE-SPACE: nowrap
+}
+#emailOverlay {
+	FILTER: alpha(opacity=50)
+}
+#sitemap-column .pagination {
+	PADDING-LEFT: 0px; MARGIN-LEFT: 12px; POSITION: relative
+}
+#sitemap-column H2 {
+	MARGIN-TOP: -9px
+}

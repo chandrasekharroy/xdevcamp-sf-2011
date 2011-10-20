@@ -1,0 +1,10 @@
+/* (c) 2009 eBay Inc. */
+
+//
+// Prefix header for all source files of the 'RLSample' target in the 'RLSample' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#endif

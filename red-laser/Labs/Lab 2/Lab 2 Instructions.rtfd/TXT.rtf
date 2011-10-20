@@ -1,0 +1,227 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 LucidaGrande;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red100\green56\blue32;\red196\green26\blue22;\red63\green110\blue116;
+\red170\green13\blue145;\red92\green38\blue153;\red0\green116\blue0;\red46\green13\blue110;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{square\}}{\leveltext\leveltemplateid1\'01\uc0\u9642 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid201\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid202\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\margl1440\margr1440\vieww18740\viewh23040\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b\fs24 \cf0 Instructions for Lab 2
+\b0 \
+\
+In this lab you'll learn how to add the RedLaser library to your project, and hook up the scanning functionality for use. At the end of this lab, we'll have the library added to your project, and in a state I'd describe as "minimally usable".\
+\
+Getting to first run is an important part of development for a new feature, and RedLaser tries to make this as easy as possible.\
+\
+In 
+\b Part 1
+\b0  of this lab, you'll need to add the RedLaser SDK library and its header file to your project.\
+\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural
+\ls1\ilvl0\cf0 {\listtext	
+\f1 \uc0\u9642 
+\f0 	}Find the two files inside the folder "RedLaser Development SDK/RedLaser SDK Files"\
+{\listtext	
+\f1 \uc0\u9642 
+\f0 	}Move them into your project list in Xcode\
+{\listtext	
+\f1 \uc0\u9642 
+\f0 	}A sheet will appear with options for adding the files. Make sure QuickScan is selected in the "Add To Targets" list.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+\
+
+\b Part 2
+\b0  of this lab is to add a button to the "RootViewController.xib" file.\
+\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural
+\ls2\ilvl0\cf0 {\listtext	\'95	}Click on the "RootViewController.xib" file in the project's file list\
+{\listtext	\'95	}Shrink the width of the text input field slightly\
+{\listtext	\'95	}Add a new Round Rect Button to the right of the text input field\
+{\listtext	\'95	}Name the button "RL"\
+{\listtext	\'95	}Your nib should now look like this:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+		{{\NeXTGraphic Pasted Graphic 1.tiff \width7420 \height9680
+}¬}\
+\
+\
+\
+
+\b Part 3 
+\b0 of this lab is to modify the "RootViewController.h" file, adding the RedLaser SDK header, a button handler for our new button, and making the RootViewController conform to the BarcodePickerController delegate protocol.\
+\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural
+\ls3\ilvl0\cf0 {\listtext	1.	}Add the following line to the import section of the header:\
+\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural
+\ls3\ilvl1\cf0 {\listtext	\uc0\u8259 	}
+\f2\fs22 \cf2 \CocoaLigature0 #import \cf3 "RedLaserSDK.h"
+\f0\fs24 \cf0 \CocoaLigature1 \
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural
+\ls3\ilvl0\cf0 {\listtext	2.	}Add the text "
+\f2\fs22 \CocoaLigature0 , \cf4 BarcodePickerControllerDelegate
+\f0\fs24 \cf0 \CocoaLigature1 " right after the "
+\f2\fs22 \cf4 \CocoaLigature0 ProductWebViewDelegate
+\f0\fs24 \cf0 \CocoaLigature1 " text, in the declaration of the RootViewController.\
+{\listtext	3.	}Add a button handler declaration for the RL button you just made by adding following line right below the lookupButtonHit handler:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+	
+\f2\fs22 \CocoaLigature0 - (\cf5 IBAction\cf0 ) redLaserButtonHit:(\cf5 id\cf0 ) sender;
+\f0\fs24 \CocoaLigature1 \
+\
+	\
+\
+Your header file should now look like this:\
+\
+\pard\tx560\pardeftab560\pardirnatural
+
+\f2\fs22 \cf0 \CocoaLigature0 \
+\pard\tx560\pardeftab560\pardirnatural
+\cf2 #import \cf3 <UIKit/UIKit.h>\cf2 \
+#import \cf3 "ProductWebViewController.h"\cf2 \
+#import \cf3 "RedLaserSDK.h"\cf2 \
+\pard\tx560\pardeftab560\pardirnatural
+\cf0 \
+\pard\tx560\pardeftab560\pardirnatural
+\cf5 @interface\cf0  RootViewController : \cf6 UIViewController\cf0  <\cf4 ProductWebViewDelegate\cf0 , \cf4 BarcodePickerControllerDelegate\cf0 >\
+\{\
+	\cf5 IBOutlet\cf0  \cf6 UITextField\cf0  				*UPCTextEntry;\
+	\cf5 IBOutlet\cf0  \cf6 UIButton\cf0  					*lookupButton;\
+	\cf5 IBOutlet\cf0  \cf6 UIActivityIndicatorView\cf0 	*lookupActivity;\
+\
+	\cf7 // URL Viewing\cf0 \
+	\cf4 ProductWebViewController\cf0 			*productPage;\
+\}\
+- (\cf5 IBAction\cf0 ) lookupButtonHit:(\cf5 id\cf0 )sender;\
+- (\cf5 IBAction\cf0 ) redLaserButtonHit:(\cf5 id\cf0 ) sender;\
+\
+\cf5 @end\cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 \CocoaLigature1 \
+\
+
+\b Part 4
+\b0  of this lab is to add the redLaserButtonHit handler to the RootViewController.m source file.\
+\
+You can write it yourself, or you can copy and paste the following method. Leave the commented out bit commented out for now:\
+\
+\pard\tx560\pardeftab560\pardirnatural
+
+\f2\fs22 \cf7 \CocoaLigature0 /*******************************************************************************\
+	redLaserButtonHit:\
+\
+	Connected to the "RL" UIButton in the RootViewController.\
+*/\cf0 \
+- (\cf5 IBAction\cf0 ) redLaserButtonHit:(id) sender\
+\{\
+	\cf7 // Make a BarcodePickerController\cf0 \
+	\cf4 BarcodePickerController\cf0  *picker = [[\cf4 BarcodePickerController\cf0  \cf8 alloc\cf0 ] \cf8 init\cf0 ];\
+	\
+	\cf7 // Set the delegate\cf0 \
+	picker.\cf4 delegate\cf0  = \cf5 self\cf0 ;\
+	\
+	\cf7 // Set the overlay\cf0 \
+\cf7 //	Overlay *overlay = [[[Overlay alloc] init] autorelease];\cf0 \
+\cf7 //	picker.overlay = overlay;\cf0 \
+\cf7 //	[overlay setBpc:picker];	\cf0 \
+\
+	\cf7 // Specify which types of barcodes we're looking for\cf0 \
+	picker.\cf4 scanEAN13\cf0  = \cf5 true\cf0 ;\
+	picker.\cf4 scanEAN8\cf0  = \cf5 false\cf0 ;\
+	picker.\cf4 scanSTICKY\cf0  = \cf5 false\cf0 ;\
+	picker.\cf4 scanQRCODE\cf0  = \cf5 false\cf0 ;\
+	picker.\cf4 scanCODE128\cf0  = \cf5 false\cf0 ;\
+	picker.\cf4 scanDATAMATRIX\cf0  = \cf5 false\cf0 ;\
+	picker.\cf4 scanITF\cf0  = \cf5 false\cf0 ;\
+	picker.\cf4 scanEAN5\cf0  = \cf5 false\cf0 ;\
+	picker.\cf4 scanEAN2\cf0 	= \cf5 false\cf0 ;\
+	\
+	\cf7 // Show the picker, which will start it scanning.\cf0 \
+	[\cf5 self\cf0  \cf8 presentModalViewController\cf0 :picker \cf8 animated\cf0 :\cf5 YES\cf0 ];\
+	[picker \cf8 release\cf0 ];\
+\}\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 \CocoaLigature1 This method creates a BarcodePickerController, which is what RedLaser uses to do its scanning. It then sets a few options, and presents the controller as a modal view.\
+\pard\tx560\pardeftab560\pardirnatural
+
+\f2\fs22 \cf0 \CocoaLigature0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b\fs24 \cf0 \CocoaLigature1 Part 5
+\b0  Now add the returnResults method. This method is called by RedLaser when it's done scanning, to tell the app what it found.\
+\
+Again, you can write it yourself, or you can copy and paste the following:\
+\pard\tx560\pardeftab560\pardirnatural
+
+\f2\fs22 \cf0 \CocoaLigature0 \
+\pard\tx560\pardeftab560\pardirnatural
+\cf7 /*******************************************************************************\
+	barcodePickerController:returnResults:\
+\
+	Delegate method of the BarcodePickerController. Called after scan session ends.\
+*/\cf0 \
+- (\cf5 void\cf0 ) barcodePickerController:(\cf4 BarcodePickerController\cf0 *)picker returnResults:(\cf6 NSSet\cf0  *)results\
+\{\
+	[\cf5 self\cf0  \cf8 dismissModalViewControllerAnimated\cf0 :\cf5 YES\cf0 ];\
+\
+	\cf7 // If we scanned multiple results, we'll just set the field twice.\cf0 \
+	\cf5 for\cf0  (\cf4 BarcodeResult\cf0  *result \cf5 in\cf0  results)\
+	\{\
+		\cf5 if\cf0  (result.\cf4 barcodeType\cf0  == \cf2 kBarcodeTypeEAN13\cf0 )\
+		\{\
+			\cf4 UPCTextEntry\cf0 .\cf6 text\cf0  = result.\cf4 barcodeString\cf0 ;\
+		\}\
+	\}\
+\}\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 \CocoaLigature1 All this method does is look at the set of results, and if any of the results are EAN13 barcodes (EAN13 is a superset of UPC barcodes) it autofills the text entry field with the barcode number.\
+\pard\tx560\pardeftab560\pardirnatural
+
+\f2\fs22 \cf0 \CocoaLigature0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b\fs24 \cf0 \CocoaLigature1 Part 6 
+\b0 Connect the action of the RL button to our "redLaserButtonHit:" handler method.\
+\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural
+\ls4\ilvl0\cf0 {\listtext	\'95	}First click on the "RootViewController.xib" file again.\
+{\listtext	\'95	}Now control click on our new "RL" button, and drag to the "File's Owner" placeholder object in the top left.\
+{\listtext	\'95	}In the "Sent Events" popup that appears, choose "redLaserButtonHit"\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+\
+\
+
+\b Part 7 
+\b0 Now you're ready to build and test! Run the app, and click the new "RL" button.\
+\
+You should see a camera preview. Scan this barcode:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf0 {{\NeXTGraphic 1__#$!@%!#__Pasted Graphic.tiff \width10360 \height3820
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf0 \
+\
+If it works, you should see the UPC field filled in with the numerals from this barcode.\
+\
+Now try this one:\
+\
+{{\NeXTGraphic 1__#$!@%!#__Pasted Graphic 1.tiff \width10360 \height3820
+}¬}\
+\
+\
+}

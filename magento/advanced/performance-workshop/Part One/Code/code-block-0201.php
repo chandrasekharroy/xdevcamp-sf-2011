@@ -1,0 +1,1 @@
+		$brands->initCache(Mage::app()->getCache(), 'brandlist', array());

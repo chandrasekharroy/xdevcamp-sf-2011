@@ -1,0 +1,30 @@
+TD.rightPanel FIELDSET {
+	POSITION: relative
+}
+TD.rightPanel FIELDSET LEGEND {
+	LEFT: 0px; POSITION: absolute; TOP: -0.5em
+}
+TD.rightPanel > DIV {
+	MARGIN-BOTTOM: 15px
+}
+.checkout DIV#container DIV#mainContent DIV.wrap TD.rightPanel FIELDSET.checkbg_lt {
+	
+}
+TD.rightPanel FIELDSET {
+	
+}
+.address-summary-heading {
+	PADDING-TOP: 1em
+}
+TD.rightPanel FIELDSET#paymentMethod DIV {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 1em
+}
+#checkoutPanelsHolder #giveAnythingForm #giveAnythingExpiration LABEL {
+	MARGIN-RIGHT: 4px
+}
+FIELDSET#billingShipping DIV {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 4px; MARGIN: 0px; PADDING-TOP: 4px
+}
+#ccDISCImg {
+	PADDING-TOP: 19px
+}

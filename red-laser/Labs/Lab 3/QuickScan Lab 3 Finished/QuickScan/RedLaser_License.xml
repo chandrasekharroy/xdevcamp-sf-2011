@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>-NOTICE-</key>
+	<string>THIS FILE IS DIGITALLY SIGNED. DO NOT MODIFY.</string>
+	<key>Company Name</key>
+	<string>RedLaser</string>
+	<key>Time Limited License</key>
+	<string>Note: This license file is for DEVELOPMENT ONLY. Do not use for submitting an App to the Apple App Store.</string>
+	<key>Expiration Date</key>
+	<date>2011-10-31T19:00:00Z</date>
+	<key>SDK Code</key>
+	<string>TLL.2011.October</string>
+</dict>
+</plist>
+-----BEGIN SIGNATURE-----
+XDQkn6cz/MnWYWjp4J5UqAlTZcxepwUYPOv9KhfNk0GCs1rACvJ5Bf5wsRSZe8cF
+3OHXYmYs2ZlSfDKijLNdsxOX7AccmVUt05aQBmSGt/0NxdiYW02UcOuTvoHlled4
+V1taC27n9PMtha60posiMu/mVXngb1Nn78tCBbqPeCCeJ+dg7t8D3Lhznk0RPVsS
+JDTA1SbwWbVhqPDyI0Sb6AdhMcR17R2cwKTEo8tjkASZpNprui2qlbKS342sW6ZS
+hmBH2KIwHhHhvOVPfqkm5NJxYNvF/0ijFFYcHkmqqt9RBwBwEWE1JJNcAOr7Mf4N
+HSueObk52kvdEA/KMmOb8tPemdGyNTVZKdfS/ZlhhAm+69FojoglqvNsLcEnDdkp
+9fYGs6CHmqcoePRtssUvxCyeiu0vpCAzZicjxqRb468uxR1ZO/CDPXxKaKNscewT
+Uqvjb0qDygZKFCkSHBbmHfxQ/n7XEAMc48esgD5MoIX5BMBEXjiPIWlRZfgcOVXi
+MSH2tMfP5xqJv6noLOXOtAB044ea47r6XESzKrO7Pu+kylScA/a4ayyZbmU9OjnM
+LuZz5ezDS/BBSDSzLuaRB1l3DNnV2G1MNJBlyk+bcpV5cx0G3fkcKmo3l68LGkdl
+9EOcctXJekSbwV8cwfm5yTOZJS0pF7A5z4MUkmwKa0s=
+-----END SIGNATURE-----

@@ -1,0 +1,226 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green116\blue0;\red92\green38\blue153;\red170\green13\blue145;
+\red63\green110\blue116;\red46\green13\blue110;\red196\green26\blue22;\red28\green0\blue207;\red100\green56\blue32;
+}
+\margl1440\margr1440\vieww18740\viewh23040\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b\fs24 \cf0 Instructions for Lab 5
+\b0 \
+\
+In this lab we're going to enable barcode tracking, and demo the multiple barcode scanning features.\
+\
+
+\b Part 1
+\b0 , add the following declaration to the @interface declaration of Overlay in Overlay.h:\
+\
+\pard\tx560\pardeftab560\pardirnatural
+
+\f1\fs22 \cf0 \CocoaLigature0 	\cf2 // A set of UILabel objects\cf0 \
+	\cf3 NSMutableSet\cf0 					*floatingLabels;\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 \CocoaLigature1 \
+The declaration for Overlay should end up looking like this:\
+\
+\pard\tx560\pardeftab560\pardirnatural
+
+\f1\fs22 \cf4 \CocoaLigature0 @interface\cf0  Overlay : \cf5 CameraOverlayViewController\cf0 \
+\{\
+	\cf2 // A set of UILabel objects\cf0 \
+	\cf3 NSMutableSet\cf0 					*floatingLabels;\
+\}\
+\cf4 @property\cf0  (\cf4 nonatomic\cf0 , \cf4 assign\cf0 ) \cf5 BarcodePickerController\cf0  *bpc;\
+\
+- (\cf4 IBAction\cf0 ) doneButtonHit:(\cf4 id\cf0 )sender;\
+\
+\cf4 @end\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 \CocoaLigature1 \
+\
+
+\b Part 2, 
+\b0 add code to initialize the new floatingLabels set in the initWithNibName: method\
+\
+\pard\tx560\pardeftab560\pardirnatural
+
+\f1\fs22 \cf0 \CocoaLigature0 		\cf5 floatingLabels\cf0  = [[\cf3 NSMutableSet\cf0  \cf6 alloc\cf0 ] \cf6 init\cf0 ];\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 \CocoaLigature1 \
+It would be good form to also add a dealloc method that releases the floatingLabels object, but it's not required. Our demo app can afford to leak a few bytes.\
+\
+\
+
+\b Part 3, 
+\b0 copy and paste this method into Overlay.m. It's rather long, so really, just copy and paste.\
+\
+When RedLaser is scanning, it will call this method repeatedly. This method is how overlays can implement dynamic UI to show the user what is happening, and guide them through advanced scanning techniques like stitched barcode reading.\
+\
+The implementation shown here just displays labels over barcodes that it finds, but it is an excellent demonstration of what's possible.\
+\
+\pard\tx560\pardeftab560\pardirnatural
+
+\f1\fs22 \cf2 \CocoaLigature0 /*******************************************************************************\
+	barcodePickerController:statusUpdated:\
+\
+	This method is called by the RedLaser SDK repeatedly while it is running. \
+	The status dictionary contains information about the state of the scan session.\
+*/\cf0 \
+- (\cf4 void\cf0 ) barcodePickerController:(\cf5 BarcodePickerController\cf0 *)picker statusUpdated:(\cf3 NSDictionary\cf0 *)status\
+\{\
+	\cf2 // Add any newly found barcodes to our set of floating labels	\cf0 \
+	\cf3 NSSet\cf0  *newBarcodes = [status \cf6 objectForKey\cf0 :\cf7 @"NewFoundBarcodes"\cf0 ];\
+	\cf4 for\cf0  (\cf5 BarcodeResult\cf0  *newCode \cf4 in\cf0  newBarcodes)\
+	\{\
+		\cf3 UILabel\cf0  *newLabel = [[[\cf3 UILabel\cf0  \cf6 alloc\cf0 ] \cf6 init\cf0 ] \cf6 autorelease\cf0 ];\
+		newLabel.\cf3 text\cf0  = newCode.\cf5 barcodeString\cf0 ;\
+		newLabel.\cf3 textAlignment\cf0  = \cf6 UITextAlignmentCenter\cf0 ; \
+		newLabel.\cf3 lineBreakMode\cf0  = \cf6 UILineBreakModeTailTruncation\cf0 ;\
+		newLabel.\cf3 numberOfLines\cf0  = \cf8 1\cf0 ;\
+		newLabel.\cf3 baselineAdjustment\cf0  = \cf6 UIBaselineAdjustmentAlignCenters\cf0 ;\
+		newLabel.\cf3 adjustsFontSizeToFitWidth\cf0  = \cf4 true\cf0 ;\
+		newLabel.\cf3 minimumFontSize\cf0  = \cf8 5\cf0 ;\
+		newLabel.\cf3 font\cf0  = [\cf3 UIFont\cf0  \cf6 systemFontOfSize\cf0 :\cf8 36.0\cf0 ];\
+		newLabel.\cf3 hidden\cf0  = \cf4 true\cf0 ;\
+				\
+		\cf4 if\cf0  (newCode.\cf5 barcodeType\cf0  == \cf9 kBarcodeTypeQRCODE\cf0 )\
+		\{\
+			newLabel.\cf3 numberOfLines\cf0  = \cf6 sqrt\cf0 ([newCode.\cf5 barcodeString\cf0  \cf6 length\cf0 ]) / \cf8 2\cf0  + \cf8 1\cf0 ;\
+			newLabel.\cf3 lineBreakMode\cf0  = \cf6 UILineBreakModeCharacterWrap\cf0 ;\
+			newLabel.\cf3 adjustsFontSizeToFitWidth\cf0  = \cf4 false\cf0 ;\
+			newLabel.\cf3 font\cf0  = [\cf3 UIFont\cf0  \cf6 systemFontOfSize\cf0 :\cf8 12\cf0 ];\
+		\}				\
+		[\cf5 floatingLabels\cf0  \cf6 addObject\cf0 :newLabel];\
+		[\cf4 self\cf0 .\cf3 view\cf0  \cf6 addSubview\cf0 :newLabel];\
+	\}\
+	\
+	\cf2 // For each floating label\cf0 \
+	\cf3 NSSet\cf0  *barcodes = [status \cf6 objectForKey\cf0 :\cf7 @"FoundBarcodes"\cf0 ];\
+	\cf4 for\cf0  (\cf3 UILabel\cf0  *label \cf4 in\cf0  \cf5 floatingLabels\cf0 )\
+	\{\
+		\cf2 // This finds BarcodeResults that match up with label objects\cf0 \
+		\cf3 NSSet\cf0  *matchingResults = [barcodes \cf6 objectsPassingTest\cf0 : ^\cf4 BOOL\cf0  (\cf4 id\cf0  obj, \cf4 BOOL\cf0  *stop)\
+				\{\
+					\cf5 BarcodeResult\cf0  *barcode = (\cf5 BarcodeResult\cf0  *) obj;\
+					\cf4 return\cf0  [label.\cf3 text\cf0  \cf6 isEqualToString\cf0 :barcode.\cf5 barcodeString\cf0 ];\
+				\}];\
+				\
+		\cf2 // If we found a BarcodeResult that matches our label\cf0 \
+		\cf5 BarcodeResult\cf0  *matchingCode = [matchingResults \cf6 anyObject\cf0 ];\
+		\cf4 if\cf0  (matchingCode)\
+		\{\
+			\cf2 // If this barcode hasn't been seen in 1.5 seconds, hide the label\cf0 \
+			\cf4 if\cf0  ([matchingCode.\cf5 mostRecentScanTime\cf0  \cf6 timeIntervalSinceNow\cf0 ] > -\cf8 1.5\cf0 )\
+			\{\
+				\cf2 // barcodeLocation is an array of points, with the first point\cf0 \
+				\cf2 // in the array being defined as the top left point of the barcode\cf0 \
+				\cf2 // and the second point in the array defined as the top right point\cf0 \
+				\cf2 // of the barcode. This means if you're looking at the barcode upside\cf0 \
+				\cf2 // down, the first point will be in the lower right, and the second\cf0 \
+				\cf2 // point in the lower left.\cf0 \
+				\cf3 NSMutableArray\cf0  *array = matchingCode.\cf5 barcodeLocation\cf0 ;\
+				label.\cf3 alpha\cf0  = \cf8 0.5\cf0 ;\
+				\
+				\cf4 if\cf0  ([array \cf6 count\cf0 ] != \cf8 4\cf0 )\
+					\cf4 continue\cf0 ;\
+				\
+				\cf2 // Calculate the midpoint of the left and right edges of the barcode\cf0 \
+				\cf2 // and put the label between them.\cf0 \
+				\cf3 CGPoint\cf0  point0 = [[array \cf6 objectAtIndex\cf0 :\cf8 0\cf0 ] \cf6 CGPointValue\cf0 ];\
+				\cf3 CGPoint\cf0  point1 = [[array \cf6 objectAtIndex\cf0 :\cf8 1\cf0 ] \cf6 CGPointValue\cf0 ];\
+				\cf3 CGPoint\cf0  point2 = [[array \cf6 objectAtIndex\cf0 :\cf8 2\cf0 ] \cf6 CGPointValue\cf0 ];\
+				\cf3 CGPoint\cf0  point3 = [[array \cf6 objectAtIndex\cf0 :\cf8 3\cf0 ] \cf6 CGPointValue\cf0 ];\
+				\cf3 CGPoint\cf0  startPoint = \cf6 CGPointMake\cf0 ((point0.\cf3 x\cf0  + point3.\cf3 x\cf0 ) / \cf8 2\cf0 ,\
+						(point0.\cf3 y\cf0  + point3.\cf3 y\cf0 ) / \cf8 2\cf0 );\
+				\cf3 CGPoint\cf0  endPoint = \cf6 CGPointMake\cf0 ((point1.\cf3 x\cf0  + point2.\cf3 x\cf0 ) / \cf8 2\cf0 ,\
+						(point1.\cf3 y\cf0  + point2.\cf3 y\cf0 ) / \cf8 2\cf0 );\
+				\cf4 double\cf0  xdist = endPoint.\cf3 x\cf0  - startPoint.\cf3 x\cf0 ;\
+				\cf4 double\cf0  ydist = endPoint.\cf3 y\cf0  - startPoint.\cf3 y\cf0 ;\
+				\cf4 double\cf0  dist = \cf6 sqrt\cf0 (xdist * xdist + ydist * ydist);\
+				\
+				\cf3 CGFloat\cf0  actualFontSize;\
+				[label.\cf3 text\cf0  \cf6 sizeWithFont\cf0 :label.\cf3 font\cf0  \cf6 minFontSize\cf0 :\cf8 5.0\cf0  \cf6 actualFontSize\cf0 :&actualFontSize\
+						\cf6 forWidth\cf0 :dist \cf6 lineBreakMode\cf0 :\cf6 UILineBreakModeTailTruncation\cf0 ];\
+				\cf3 CGSize\cf0  realSize = [label.\cf3 text\cf0  \cf6 sizeWithFont\cf0 :[\cf3 UIFont\cf0  \cf6 systemFontOfSize\cf0 :actualFontSize]];\
+				\
+				\cf2 // If it's a QR Code, we're aligning it as a multiline label\cf0 \
+				\cf4 if\cf0  (matchingCode.\cf5 barcodeType\cf0  == \cf9 kBarcodeTypeQRCODE\cf0 )\
+				\{\
+					actualFontSize = \cf8 8.0\cf0 ;\
+					realSize = [label.\cf3 text\cf0  \cf6 sizeWithFont\cf0 :[\cf3 UIFont\cf0  \cf6 systemFontOfSize\cf0 :actualFontSize]];\
+					realSize.\cf3 height\cf0  = realSize.\cf3 height\cf0  * label.\cf3 numberOfLines\cf0 ;\
+				\}				\
+				\
+				\cf2 // Apply a transform to the label to put it in the correct place onscreen.\cf0 \
+				label.\cf3 transform\cf0  = \cf3 CGAffineTransformIdentity\cf0 ;\
+				label.\cf3 frame\cf0  = \cf6 CGRectMake\cf0 (\cf8 0\cf0 , \cf8 0\cf0 , dist, realSize.\cf3 height\cf0 );\
+				\cf4 double\cf0  radians = \cf6 acos\cf0 (xdist / dist);\
+				\cf4 if\cf0  (ydist < \cf8 0\cf0 )\
+					radians = - radians;\
+				label.\cf3 transform\cf0  = \cf6 CGAffineTransformMakeRotation\cf0 (radians);\
+\
+				\cf4 if\cf0  (label.\cf3 hidden\cf0 )\
+				\{\
+					label.\cf3 center\cf0  = \cf6 CGPointMake\cf0 ((startPoint.\cf3 x\cf0  + endPoint.\cf3 x\cf0 ) / \cf8 2\cf0 , \
+							(startPoint.\cf3 y\cf0  + endPoint.\cf3 y\cf0 ) / \cf8 2\cf0 );\
+					label.\cf3 hidden\cf0  = \cf4 false\cf0 ;\
+				\}\
+				\
+				\cf2 // Animate the label towards its correct position to smooth things out\cf0 \
+				[\cf3 UIView\cf0  \cf6 animateWithDuration\cf0 :\cf8 0.3\cf0  \cf6 delay\cf0 :\cf8 0\cf0  \cf6 options\cf0 :\
+						\cf6 UIViewAnimationOptionAllowUserInteraction\cf0  |\
+						\cf6 UIViewAnimationOptionBeginFromCurrentState\cf0  |\
+						\cf6 UIViewAnimationOptionCurveEaseInOut\cf0 \
+						\cf6 animations\cf0 :^\
+						\{\
+							label.\cf3 center\cf0  = \cf6 CGPointMake\cf0 ((startPoint.\cf3 x\cf0  + endPoint.\cf3 x\cf0 ) / \cf8 2\cf0 , \
+									(startPoint.\cf3 y\cf0  + endPoint.\cf3 y\cf0 ) / \cf8 2\cf0 );\
+						\}\
+						\cf6 completion\cf0 :^(\cf4 BOOL\cf0  finished)\
+						\{\
+						\}];\
+\
+			\} \cf4 else\cf0  \
+			\{\
+				label.\cf3 hidden\cf0  = \cf4 true\cf0 ;\
+			\}\
+		\} \cf4 else\cf0 \
+		\{\
+			label.\cf3 hidden\cf0  = \cf4 true\cf0 ;\
+		\}\
+	\}\
+		\
+	\cf2 // Tell the view we need to redisplay things\cf0 \
+	[\cf4 self\cf0 .\cf3 view\cf0  \cf6 setNeedsDisplay\cf0 ];\
+\}\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 \CocoaLigature1 \
+
+\b Part 4, 
+\b0 run and test! Note that now that we have a barcodePickerController:statusUpdated: method, the picker will no longer close itself after scanning a single barcode. If you want that to happen, you'll need to close it manually with doneScanning.\
+\
+Here's a bunch of barcodes to try. They're a mix of QR and UPC codes. Try them all at once!\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf0  {{\NeXTGraphic Pasted Graphic 1.tiff \width3500 \height3500
+}¬}{{\NeXTGraphic IMG_0763.jpg \width12800 \height9560
+}¬}\
+{{\NeXTGraphic IMG_0760.jpg \width9560 \height12800
+}¬}  \
+\
+\
+{{\NeXTGraphic Pasted Graphic 2.tiff \width10360 \height3820
+}¬}{{\NeXTGraphic Pasted Graphic 3.tiff \width3500 \height3500
+}¬}\
+\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+}

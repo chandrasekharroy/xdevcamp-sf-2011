@@ -1,0 +1,391 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA38670A1441601400C1033C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3867091441601400C1033C /* UIKit.framework */; };
+		EA38670C1441601400C1033C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA38670B1441601400C1033C /* Foundation.framework */; };
+		EA38670E1441601400C1033C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA38670D1441601400C1033C /* CoreGraphics.framework */; };
+		EA3867141441601400C1033C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA3867121441601400C1033C /* InfoPlist.strings */; };
+		EA3867161441601400C1033C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3867151441601400C1033C /* main.m */; };
+		EA38671A1441601400C1033C /* QuickScanAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3867191441601400C1033C /* QuickScanAppDelegate.m */; };
+		EA38671D1441601500C1033C /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA38671B1441601400C1033C /* MainWindow.xib */; };
+		EA3867201441601E00C1033C /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA38671F1441601E00C1033C /* RootViewController.m */; };
+		EA3867231441601E00C1033C /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA3867211441601E00C1033C /* RootViewController.xib */; };
+		EA38672F144161EC00C1033C /* ProductWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA38672E144161EC00C1033C /* ProductWebViewController.m */; };
+		EA386733144161F100C1033C /* ProductWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA386731144161F100C1033C /* ProductWebViewController.xib */; };
+		EA3867351441622300C1033C /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3867341441622300C1033C /* libxml2.dylib */; };
+		EA38673B144162DE00C1033C /* RedLaser_License.xml in Resources */ = {isa = PBXBuildFile; fileRef = EA38673A144162DE00C1033C /* RedLaser_License.xml */; };
+		EABD187714416BA900A3E392 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABD186E14416BA900A3E392 /* AVFoundation.framework */; };
+		EABD187814416BA900A3E392 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABD187014416BA900A3E392 /* CoreMedia.framework */; };
+		EABD187914416BA900A3E392 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABD187114416BA900A3E392 /* CoreVideo.framework */; };
+		EABD187A14416BA900A3E392 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EABD187214416BA900A3E392 /* libiconv.dylib */; };
+		EABD187B14416BA900A3E392 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EABD187314416BA900A3E392 /* libstdc++.dylib */; };
+		EABD187C14416BA900A3E392 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABD187414416BA900A3E392 /* OpenGLES.framework */; };
+		EABD187D14416BA900A3E392 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABD187514416BA900A3E392 /* QuartzCore.framework */; };
+		EABD187E14416BA900A3E392 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABD187614416BA900A3E392 /* Security.framework */; };
+		EABD188E14416F0800A3E392 /* QuickScan_Overlay_Image.png in Resources */ = {isa = PBXBuildFile; fileRef = EABD188D14416F0800A3E392 /* QuickScan_Overlay_Image.png */; };
+		EABD18961441757700A3E392 /* libRedLaserSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EABD18941441757700A3E392 /* libRedLaserSDK.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EA3867051441601400C1033C /* QuickScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA3867091441601400C1033C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EA38670B1441601400C1033C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EA38670D1441601400C1033C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EA3867111441601400C1033C /* QuickScan-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QuickScan-Info.plist"; sourceTree = "<group>"; };
+		EA3867131441601400C1033C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA3867151441601400C1033C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA3867171441601400C1033C /* QuickScan-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QuickScan-Prefix.pch"; sourceTree = "<group>"; };
+		EA3867181441601400C1033C /* QuickScanAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickScanAppDelegate.h; sourceTree = "<group>"; };
+		EA3867191441601400C1033C /* QuickScanAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickScanAppDelegate.m; sourceTree = "<group>"; };
+		EA38671C1441601500C1033C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		EA38671E1441601E00C1033C /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		EA38671F1441601E00C1033C /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		EA3867221441601E00C1033C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		EA38672D144161EC00C1033C /* ProductWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductWebViewController.h; sourceTree = "<group>"; };
+		EA38672E144161EC00C1033C /* ProductWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductWebViewController.m; sourceTree = "<group>"; };
+		EA386732144161F100C1033C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ProductWebViewController.xib; sourceTree = "<group>"; };
+		EA3867341441622300C1033C /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		EA38673A144162DE00C1033C /* RedLaser_License.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = RedLaser_License.xml; sourceTree = "<group>"; };
+		EABD186E14416BA900A3E392 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EABD186F14416BA900A3E392 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EABD187014416BA900A3E392 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		EABD187114416BA900A3E392 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		EABD187214416BA900A3E392 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		EABD187314416BA900A3E392 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/gcc/arm-apple-darwin10/4.0.1/libstdc++.dylib"; sourceTree = SDKROOT; };
+		EABD187414416BA900A3E392 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		EABD187514416BA900A3E392 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EABD187614416BA900A3E392 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		EABD188D14416F0800A3E392 /* QuickScan_Overlay_Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QuickScan_Overlay_Image.png; sourceTree = "<group>"; };
+		EABD18941441757700A3E392 /* libRedLaserSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libRedLaserSDK.a; sourceTree = "<group>"; };
+		EABD18951441757700A3E392 /* RedLaserSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedLaserSDK.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA3867021441601400C1033C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EABD187714416BA900A3E392 /* AVFoundation.framework in Frameworks */,
+				EA38670E1441601400C1033C /* CoreGraphics.framework in Frameworks */,
+				EABD187814416BA900A3E392 /* CoreMedia.framework in Frameworks */,
+				EABD187914416BA900A3E392 /* CoreVideo.framework in Frameworks */,
+				EABD187A14416BA900A3E392 /* libiconv.dylib in Frameworks */,
+				EABD187B14416BA900A3E392 /* libstdc++.dylib in Frameworks */,
+				EABD187C14416BA900A3E392 /* OpenGLES.framework in Frameworks */,
+				EABD187D14416BA900A3E392 /* QuartzCore.framework in Frameworks */,
+				EABD187E14416BA900A3E392 /* Security.framework in Frameworks */,
+				EA3867351441622300C1033C /* libxml2.dylib in Frameworks */,
+				EA38670A1441601400C1033C /* UIKit.framework in Frameworks */,
+				EA38670C1441601400C1033C /* Foundation.framework in Frameworks */,
+				EABD18961441757700A3E392 /* libRedLaserSDK.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA3866FA1441601400C1033C = {
+			isa = PBXGroup;
+			children = (
+				EABD18931441757700A3E392 /* RedLaser SDK Files */,
+				EA38670F1441601400C1033C /* QuickScan */,
+				EA3867081441601400C1033C /* Frameworks */,
+				EABD188014416BC300A3E392 /* RedLaser Frameworks */,
+				EA3867061441601400C1033C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA3867061441601400C1033C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA3867051441601400C1033C /* QuickScan.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA3867081441601400C1033C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA3867091441601400C1033C /* UIKit.framework */,
+				EA38670B1441601400C1033C /* Foundation.framework */,
+				EA38670D1441601400C1033C /* CoreGraphics.framework */,
+				EA3867341441622300C1033C /* libxml2.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA38670F1441601400C1033C /* QuickScan */ = {
+			isa = PBXGroup;
+			children = (
+				EA38671E1441601E00C1033C /* RootViewController.h */,
+				EA38671F1441601E00C1033C /* RootViewController.m */,
+				EA3867211441601E00C1033C /* RootViewController.xib */,
+				EA38672D144161EC00C1033C /* ProductWebViewController.h */,
+				EA38672E144161EC00C1033C /* ProductWebViewController.m */,
+				EA386731144161F100C1033C /* ProductWebViewController.xib */,
+				EA3867101441601400C1033C /* Supporting Files */,
+			);
+			path = QuickScan;
+			sourceTree = "<group>";
+		};
+		EA3867101441601400C1033C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA3867111441601400C1033C /* QuickScan-Info.plist */,
+				EA3867121441601400C1033C /* InfoPlist.strings */,
+				EA3867151441601400C1033C /* main.m */,
+				EA3867181441601400C1033C /* QuickScanAppDelegate.h */,
+				EA3867191441601400C1033C /* QuickScanAppDelegate.m */,
+				EA38671B1441601400C1033C /* MainWindow.xib */,
+				EA3867171441601400C1033C /* QuickScan-Prefix.pch */,
+				EA38673A144162DE00C1033C /* RedLaser_License.xml */,
+				EABD188D14416F0800A3E392 /* QuickScan_Overlay_Image.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EABD188014416BC300A3E392 /* RedLaser Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EABD186E14416BA900A3E392 /* AVFoundation.framework */,
+				EABD186F14416BA900A3E392 /* CoreGraphics.framework */,
+				EABD187014416BA900A3E392 /* CoreMedia.framework */,
+				EABD187114416BA900A3E392 /* CoreVideo.framework */,
+				EABD187214416BA900A3E392 /* libiconv.dylib */,
+				EABD187314416BA900A3E392 /* libstdc++.dylib */,
+				EABD187414416BA900A3E392 /* OpenGLES.framework */,
+				EABD187514416BA900A3E392 /* QuartzCore.framework */,
+				EABD187614416BA900A3E392 /* Security.framework */,
+			);
+			name = "RedLaser Frameworks";
+			sourceTree = "<group>";
+		};
+		EABD18931441757700A3E392 /* RedLaser SDK Files */ = {
+			isa = PBXGroup;
+			children = (
+				EABD18941441757700A3E392 /* libRedLaserSDK.a */,
+				EABD18951441757700A3E392 /* RedLaserSDK.h */,
+			);
+			name = "RedLaser SDK Files";
+			path = "../../RedLaser Development SDK/RedLaser SDK Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA3867041441601400C1033C /* QuickScan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA3867261441601E00C1033C /* Build configuration list for PBXNativeTarget "QuickScan" */;
+			buildPhases = (
+				EA3867011441601400C1033C /* Sources */,
+				EA3867021441601400C1033C /* Frameworks */,
+				EA3867031441601400C1033C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuickScan;
+			productName = QuickScan;
+			productReference = EA3867051441601400C1033C /* QuickScan.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA3866FC1441601400C1033C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Critical Path Software";
+			};
+			buildConfigurationList = EA3866FF1441601400C1033C /* Build configuration list for PBXProject "QuickScan" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EA3866FA1441601400C1033C;
+			productRefGroup = EA3867061441601400C1033C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA3867041441601400C1033C /* QuickScan */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA3867031441601400C1033C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA3867141441601400C1033C /* InfoPlist.strings in Resources */,
+				EA38671D1441601500C1033C /* MainWindow.xib in Resources */,
+				EA3867231441601E00C1033C /* RootViewController.xib in Resources */,
+				EA386733144161F100C1033C /* ProductWebViewController.xib in Resources */,
+				EA38673B144162DE00C1033C /* RedLaser_License.xml in Resources */,
+				EABD188E14416F0800A3E392 /* QuickScan_Overlay_Image.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA3867011441601400C1033C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA3867161441601400C1033C /* main.m in Sources */,
+				EA38671A1441601400C1033C /* QuickScanAppDelegate.m in Sources */,
+				EA3867201441601E00C1033C /* RootViewController.m in Sources */,
+				EA38672F144161EC00C1033C /* ProductWebViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EA3867121441601400C1033C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA3867131441601400C1033C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EA38671B1441601400C1033C /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA38671C1441601500C1033C /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		EA3867211441601E00C1033C /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA3867221441601E00C1033C /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+		EA386731144161F100C1033C /* ProductWebViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA386732144161F100C1033C /* en */,
+			);
+			name = ProductWebViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA3867241441601E00C1033C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EA3867251441601E00C1033C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA3867271441601E00C1033C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QuickScan/QuickScan-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SDK_DIR)\"/usr/include/libxml2";
+				INFOPLIST_FILE = "QuickScan/QuickScan-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/usr/lib/gcc/arm-apple-darwin10/4.0.1\"",
+					"\"$(SRCROOT)/../../RedLaser Development SDK/RedLaser SDK Files\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EA3867281441601E00C1033C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QuickScan/QuickScan-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SDK_DIR)\"/usr/include/libxml2";
+				INFOPLIST_FILE = "QuickScan/QuickScan-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/usr/lib/gcc/arm-apple-darwin10/4.0.1\"",
+					"\"$(SRCROOT)/../../RedLaser Development SDK/RedLaser SDK Files\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA3866FF1441601400C1033C /* Build configuration list for PBXProject "QuickScan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA3867241441601E00C1033C /* Debug */,
+				EA3867251441601E00C1033C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA3867261441601E00C1033C /* Build configuration list for PBXNativeTarget "QuickScan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA3867271441601E00C1033C /* Debug */,
+				EA3867281441601E00C1033C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA3866FC1441601400C1033C /* Project object */;
+}

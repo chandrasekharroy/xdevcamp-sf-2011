@@ -1,0 +1,15 @@
+	<frontend>
+		<routers>
+			<checkout>
+				<args>
+					<modules>
+						<!--
+						Add our controllers directory to the "controller include path" of the checkout module
+						-->
+						<Example_Checkout before="Mage_Checkout">Example_Checkout</Example_Checkout>
+					</modules>
+				</args>
+			</checkout>
+		</routers>
+	</frontend>
+

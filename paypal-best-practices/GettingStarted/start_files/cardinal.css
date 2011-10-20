@@ -1,0 +1,315 @@
+DIV#outerEnrollDiv {
+	DISPLAY: none; LEFT: 30%; POSITION: absolute; TOP: 25px; HEIGHT: 500px; zIndex: 300
+}
+DIV#iFrameDivEnroll {
+	LEFT: 0px; POSITION: absolute; TOP: 0px; HEIGHT: 500px; zIndex: 300
+}
+DIV#outerDiv {
+	DISPLAY: none; LEFT: 25%; POSITION: absolute; TOP: 25px; zIndex: 300
+}
+DIV#outerDivAuthSuccess {
+	DISPLAY: none; LEFT: 25%; POSITION: absolute; TOP: 25px; zIndex: 300
+}
+DIV#iFrameDiv {
+	DISPLAY: none; WIDTH: 400px; POSITION: relative; HEIGHT: 380px
+}
+#iFrameId {
+	BACKGROUND: white; WIDTH: 380px; POSITION: relative; HEIGHT: 450px; frameborder: 1
+}
+SUP {
+	FONT-SIZE: 10px
+}
+.floatLeft {
+	FLOAT: left
+}
+.floatRight {
+	FLOAT: right
+}
+.clearFloat {
+	CLEAR: both; FONT-SIZE: 1%; LINE-HEIGHT: 0; HEIGHT: 0px
+}
+.marginTop13 {
+	MARGIN-TOP: 13px
+}
+.leftText {
+	TEXT-ALIGN: left
+}
+.marginTop4 {
+	MARGIN-TOP: 5px
+}
+.bothMargin5 {
+	MARGIN-TOP: 5px; MARGIN-BOTTOM: 5px
+}
+.marginTop18 {
+	MARGIN-TOP: 18px
+}
+.marginTop32 {
+	MARGIN-TOP: 32px
+}
+.marginTop23 {
+	MARGIN-TOP: 23px
+}
+.marginTop23 {
+	MARGIN-TOP: 26px
+}
+.marginTB {
+	MARGIN: 20px 0px
+}
+.marginVEC {
+	MARGIN: 5px 0px
+}
+.marginLeft50 {
+	MARGIN-LEFT: 50px
+}
+.width382 {
+	WIDTH: 375px
+}
+.text15 {
+	FONT-SIZE: 15px
+}
+.text14 {
+	FONT-SIZE: 14px
+}
+.text11 {
+	FONT-SIZE: 11px
+}
+.marginTop60 {
+	MARGIN-TOP: 60px
+}
+.paddingTop20 {
+	PADDING-TOP: 20px! important
+}
+.paddingTop5 {
+	PADDING-TOP: 5px! important
+}
+.paddingTop30 {
+	PADDING-TOP: 30px! important
+}
+.nobg {
+	BACKGROUND: none transparent scroll repeat 0% 0%
+}
+.padding53 {
+	PADDING-TOP: 53px! important
+}
+#topArea {
+	OVERFLOW: hidden; WIDTH: 420px; HEIGHT: 45px
+}
+#topArea H4.logo {
+	MARGIN-TOP: 7px; BACKGROUND: url(../vbv/images/popup_visaLogo.gif) no-repeat left top; MARGIN-LEFT: 7px; WIDTH: 65px; TEXT-INDENT: -100000em; HEIGHT: 30px
+}
+#topArea H4.mclogo {
+	MARGIN-TOP: 7px; BACKGROUND: url(../vbv/images/popup_mastercardLogo.gif) no-repeat left top; MARGIN-LEFT: 7px; WIDTH: 65px; TEXT-INDENT: -100000em; HEIGHT: 30px
+}
+#topAreaEnrollment H4.mclogo {
+	MARGIN-TOP: 7px; BACKGROUND: url(../vbv/images/popup_mastercardLogo.gif) no-repeat left top; LEFT: 160px; MARGIN-LEFT: 7px; WIDTH: 65px; TEXT-INDENT: -100000em; POSITION: relative; HEIGHT: 30px
+}
+#topAreaSuccess H4.mclogo {
+	MARGIN-TOP: 7px; BACKGROUND: url(../vbv/images/popup_mastercardLogo.gif) no-repeat left top; MARGIN-LEFT: 7px; WIDTH: 65px; TEXT-INDENT: -100000em; HEIGHT: 30px
+}
+#topAreaFailure H4.mclogo {
+	MARGIN-TOP: 7px; BACKGROUND: url(../vbv/images/popup_mastercardLogo.gif) no-repeat left top; MARGIN-LEFT: 7px; WIDTH: 65px; TEXT-INDENT: -100000em; HEIGHT: 30px
+}
+#topArea A.closeTop {
+	MARGIN-TOP: 10px; DISPLAY: block; BACKGROUND: url(../vbv/images/pop_closeIcon.gif) no-repeat right top; WIDTH: 30px; TEXT-INDENT: -10000em; MARGIN-RIGHT: 10px; HEIGHT: 30px
+}
+#topAreaEnrollment {
+	WIDTH: 420px; HEIGHT: 45px
+}
+#topAreaSuccess {
+	OVERFLOW: hidden; WIDTH: 420px; HEIGHT: 45px
+}
+#topAreaEnrollment A.closeTop {
+	MARGIN-TOP: 5px; DISPLAY: block; BACKGROUND: url(../vbv/images/pop_closeIcon.gif) no-repeat right top; MARGIN-BOTTOM: 10px; WIDTH: 30px; TEXT-INDENT: -10000em; MARGIN-RIGHT: 10px; HEIGHT: 30px
+}
+#sorryBase {
+	PADDING-RIGHT: 41px; PADDING-LEFT: 41px; BACKGROUND: url(../vbv/images/bg_PopupPayment_v01-sorry.png) no-repeat left top; LEFT: 0px; PADDING-BOTTOM: 38px; OVERFLOW: hidden; WIDTH: 500px; PADDING-TOP: 38px; POSITION: relative; TOP: 0px; HEIGHT: 470px
+}
+#topAreaEnrollment H4.logo {
+	MARGIN-TOP: 7px; BACKGROUND: url(../vbv/images/popup_visaLogo.gif) no-repeat left top; LEFT: 160px; MARGIN-LEFT: 7px; WIDTH: 65px; TEXT-INDENT: -100000em; POSITION: relative; HEIGHT: 30px
+}
+#topAreaSuccess H4.logo {
+	MARGIN-TOP: 7px; BACKGROUND: url(../vbv/images/popup_visaLogo.gif) no-repeat left top; MARGIN-LEFT: 7px; WIDTH: 65px; TEXT-INDENT: -100000em; HEIGHT: 30px
+}
+#topAreaFailure H4.logo {
+	MARGIN-TOP: 7px; BACKGROUND: url(../vbv/images/popup_visaLogo.gif) no-repeat left top; MARGIN-LEFT: 7px; WIDTH: 65px; TEXT-INDENT: -100000em; HEIGHT: 30px
+}
+#topAreaSuccess A.closeTop {
+	MARGIN-TOP: 10px; DISPLAY: block; BACKGROUND: url(../vbv/images/pop_closeIcon.gif) no-repeat right top; WIDTH: 30px; TEXT-INDENT: -10000em; MARGIN-RIGHT: 10px; HEIGHT: 30px
+}
+#topAreaFailure A.closeTop {
+	MARGIN-TOP: 10px; DISPLAY: block; BACKGROUND: url(../vbv/images/pop_closeIcon.gif) no-repeat right top; WIDTH: 30px; TEXT-INDENT: -10000em; MARGIN-RIGHT: 10px; HEIGHT: 30px
+}
+#formBase {
+	PADDING-RIGHT: 41px; PADDING-LEFT: 41px; BACKGROUND: url(../vbv/images/bg_PopupPayment_v01-form.png) no-repeat left top; LEFT: 0px; PADDING-BOTTOM: 38px; OVERFLOW: hidden; WIDTH: 500px; PADDING-TOP: 38px; POSITION: relative; TOP: 0px; HEIGHT: 800px
+}
+#successBase {
+	PADDING-RIGHT: 41px; PADDING-LEFT: 41px; BACKGROUND: url(../vbv/images/bg_PopupPayment_v01-success.png) no-repeat left top; LEFT: 0px; PADDING-BOTTOM: 38px; OVERFLOW: hidden; WIDTH: 470px; PADDING-TOP: 38px; POSITION: relative; TOP: 0px; HEIGHT: 400px
+}
+#authIFrame {
+	WIDTH: 376px; HEIGHT: 400px
+}
+#enrollmentBase {
+	PADDING-RIGHT: 41px; PADDING-LEFT: 41px; BACKGROUND: url(../vbv/images/bg_Enroll_dialog.png) no-repeat left top; LEFT: 0px; PADDING-BOTTOM: 38px; OVERFLOW: hidden; WIDTH: 500px; PADDING-TOP: 38px; POSITION: relative; TOP: 0px; HEIGHT: 570px
+}
+#enrollIFrame {
+	WIDTH: 382px; HEIGHT: 425px
+}
+#popupContainer {
+	PADDING-RIGHT: 20px; PADDING-LEFT: 20px; PADDING-BOTTOM: 0px; COLOR: #000; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; POSITION: relative; TOP: 0px; BORDER-BOTTOM-STYLE: none
+}
+#popupContainerSuccess TABLE {
+	MARGIN-LEFT: 30px
+}
+#popupContainerSuccess {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; LEFT: 16px; PADDING-BOTTOM: 0px; COLOR: #000; PADDING-TOP: 0px; POSITION: relative; TOP: 8px
+}
+#enrollPopupContainer {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; LEFT: 10px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; POSITION: relative; TOP: 0px
+}
+#popupContainer H1.thankyou {
+	BACKGROUND: url(../vbv/images/imgThankyou.gif) no-repeat center 50%; MARGIN: 0px auto; VERTICAL-ALIGN: middle; WIDTH: 161px; TEXT-INDENT: -10000em; HEIGHT: 23px
+}
+#popupEnrollmentContainer H1.thankyou {
+	BACKGROUND: url(../vbv/images/imgThankyou.gif) no-repeat center 50%; MARGIN: 0px auto; VERTICAL-ALIGN: middle; WIDTH: 161px; TEXT-INDENT: -10000em; HEIGHT: 23px
+}
+#popupContainer A.userDifferentCard {
+	DISPLAY: block; BACKGROUND: url(../vbv/images/select_another_payment.gif) no-repeat left top; LEFT: 10px; WIDTH: 191px; TEXT-INDENT: -10000em; POSITION: relative; HEIGHT: 29px
+}
+#popupContainer A.userDifferentCard2 {
+	DISPLAY: block; BACKGROUND: url(../vbv/images/btn_userDifferentCard.gif) no-repeat left top; LEFT: 32px; WIDTH: 145px; TEXT-INDENT: -10000em; POSITION: relative; HEIGHT: 29px
+}
+#popupContainerSuccess A.userDifferentCard3 {
+	DISPLAY: block; BACKGROUND: url(../vbv/images/select_another_payment.gif) no-repeat left top; LEFT: 15px; WIDTH: 191px; TEXT-INDENT: -10000em; POSITION: relative; HEIGHT: 29px
+}
+#popupContainer H2.paymentSorry {
+	BACKGROUND: url(../vbv/images/triangle.gif) no-repeat left 50%; TEXT-INDENT: -10000em; HEIGHT: 40px
+}
+#popupContainerSuccess H2.paymentSorry {
+	BACKGROUND: url(../vbv/images/triangle.gif) no-repeat left 50%; TEXT-INDENT: -10000em; HEIGHT: 40px
+}
+#popupContainer P {
+	MARGIN: 10px 0px
+}
+#popupContainer H2.title {
+	FONT-WEIGHT: normal; FONT-SIZE: 15px
+}
+#popupContainer P.normal {
+	FONT-SIZE: 12px
+}
+#popupContainer P.bigger {
+	FONT-WEIGHT: bold; FONT-SIZE: 15px
+}
+#popupContainer A.close {
+	DISPLAY: block; FONT-SIZE: 13px; COLOR: #044491; TEXT-ALIGN: center; TEXT-DECORATION: underline
+}
+#popupContainerSuccess H2.title {
+	FONT-WEIGHT: normal; FONT-SIZE: 15px
+}
+#popupContainerSuccess P.normal {
+	FONT-SIZE: 12px
+}
+#popupContainerSuccess P.bigger {
+	FONT-WEIGHT: bold; FONT-SIZE: 15px
+}
+#popupContainerSuccess A.close {
+	DISPLAY: block; FONT-SIZE: 13px; COLOR: #044491; TEXT-DECORATION: underline
+}
+#popupEnrollmentContainer H2.title {
+	FONT-WEIGHT: normal; FONT-SIZE: 15px
+}
+#popupEnrollmentContainer P.normal {
+	FONT-SIZE: 12px
+}
+#popupEnrollmentContainer P.bigger {
+	FONT-WEIGHT: bold; FONT-SIZE: 15px
+}
+#popupEnrollmentContainer A.close {
+	DISPLAY: block; FONT-SIZE: 13px; COLOR: #044491; TEXT-ALIGN: center; TEXT-DECORATION: underline
+}
+#popupContainer H1.sorry {
+	BACKGROUND: url(../vbv/images/triangle.gif) no-repeat center 50%; TEXT-INDENT: -10000em
+}
+#popupEnrollmentContainer H1.sorry {
+	BACKGROUND: url(../vbv/images/triangle.gif) no-repeat center 50%; TEXT-INDENT: -10000em
+}
+#popupContainer .lineHorizontal {
+	CLEAR: both; FONT-SIZE: 1%; BORDER-BOTTOM: #dbdbdb 1px solid; HEIGHT: 1px
+}
+#popupEnrollmentContainer .lineHorizontal {
+	CLEAR: both; FONT-SIZE: 1%; BORDER-BOTTOM: #dbdbdb 1px solid; HEIGHT: 1px
+}
+#popupContainer A.userDifferentCard {
+	DISPLAY: block; BACKGROUND: url(../vbv/images/select_another_payment.gif) no-repeat left top; LEFT: 10px; WIDTH: 191px; TEXT-INDENT: -10000em; POSITION: relative; HEIGHT: 29px
+}
+#popupContainer H1.paymentSorry {
+	BACKGROUND: url(../vbv/images/triangle.gif) no-repeat left 50%; TEXT-INDENT: -10000em
+}
+#popupContainer H1.failureText {
+	VERTICAL-ALIGN: text-bottom; COLOR: navy
+}
+#popupContainerSuccess H1.failureText {
+	VERTICAL-ALIGN: text-bottom; COLOR: navy
+}
+#popupContainerSuccess H1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 25px; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 0px; COLOR: #000; PADDING-TOP: 0px; TEXT-ALIGN: center
+}
+#popupContainer H1.success {
+	FONT-SIZE: 27px; COLOR: #044491
+}
+#popupContainerSuccess H1.success {
+	FONT-SIZE: 27px; FLOAT: left; COLOR: #044491
+}
+#popupContainerSuccess H2.success {
+	MARGIN-TOP: 20px; FONT-SIZE: 27px; FLOAT: none; MARGIN-LEFT: 10px; COLOR: #044491
+}
+#popupContainer A.submitOrder {
+	DISPLAY: block; BACKGROUND: url(../vbv/images/btn_submitOrder.gif) no-repeat left top; LEFT: 90px; WIDTH: 191px; TEXT-INDENT: -10000em; POSITION: relative; HEIGHT: 35px
+}
+#popupContainerSuccess A.submitOrder {
+	DISPLAY: block; BACKGROUND: url(../vbv/images/return_to_checkout.gif) no-repeat left top; LEFT: 90px; WIDTH: 191px; TEXT-INDENT: -10000em; POSITION: relative; HEIGHT: 35px
+}
+#popupContainer H1.creditCardEnrolled {
+	FONT-SIZE: 27px; COLOR: #044491
+}
+#popupContainer H2.creditCardEnrolled {
+	FONT-SIZE: 27px; COLOR: #044491
+}
+#popupContainer .feed {
+	BORDER-RIGHT: #b1b1b1 1px solid; BORDER-TOP: #b1b1b1 1px solid; BACKGROUND: #fff; BORDER-LEFT: #b1b1b1 1px solid; WIDTH: 377px; BORDER-BOTTOM: #b1b1b1 1px solid
+}
+#bg_vbvDrawerClose {
+	PADDING-RIGHT: 20px; DISPLAY: block; PADDING-LEFT: 20px; BACKGROUND: url(../vbv/images/bg_expandBody.gif) #fff repeat-x left bottom; PADDING-BOTTOM: 10px; OVERFLOW: hidden; PADDING-TOP: 0px
+}
+#bg_vbvDrawerClose H1 {
+	PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 17px; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 0px; COLOR: #044491
+}
+#bg_vbvDrawerClose A.close {
+	DISPLAY: block; BACKGROUND: url(../vbv/images/icon_close.gif) no-repeat left top; WIDTH: 18px; TEXT-INDENT: -100000em; HEIGHT: 17px
+}
+#bg_vbvDrawerClose A.open {
+	DISPLAY: block; BACKGROUND: url(../vbv/images/icon_open.gif) no-repeat left top; WIDTH: 56px; TEXT-INDENT: -100000em; HEIGHT: 17px
+}
+#bg_vbvDrawerClose P.small {
+	MARGIN-TOP: 0px; FONT-SIZE: 11px
+}
+#bg_vbvDrawerClose A.enrollToday {
+	MARGIN-TOP: 5px; DISPLAY: block; BACKGROUND: url(../vbv/images/btn_enrollNnoThankx.gif) no-repeat left top; WIDTH: 132px; TEXT-INDENT: -10000em; HEIGHT: 32px; TEXT-ALIGN: left
+}
+#bg_vbvDrawerClose A.noThankx {
+	MARGIN-TOP: 5px; DISPLAY: block; BACKGROUND: url(../vbv/images/btn_enrollNnoThankx.gif) no-repeat right top; WIDTH: 132px; TEXT-INDENT: -10000em; HEIGHT: 32px; TEXT-ALIGN: left
+}
+#bg_vbvDrawerClose A.visa {
+	MARGIN-TOP: -30px; BACKGROUND: url(../vbv/images/verified_by_visa.gif) no-repeat center 50%; WIDTH: 231px; TEXT-INDENT: -10000em; HEIGHT: 61px
+}
+#bg_vbvDrawerClose A.mastercard {
+	MARGIN-TOP: -30px; BACKGROUND: url(../vbv/images/mastercard_icon.gif) no-repeat center 50%; WIDTH: 231px; TEXT-INDENT: -10000em; HEIGHT: 96px
+}
+#bg_vbvDrawerOpen {
+	PADDING-RIGHT: 26px; DISPLAY: none; PADDING-LEFT: 26px; BACKGROUND: url(../vbv/images/bg_expandBody.gif) #e5e5e5 repeat-x left bottom; PADDING-BOTTOM: 10px; OVERFLOW: hidden; PADDING-TOP: 10px; POSITION: relative; HEIGHT: 38px
+}
+#bg_vbvDrawerOpen H1 {
+	FONT-SIZE: 17px; COLOR: #044491
+}
+#bg_vbvDrawerOpen A.open {
+	DISPLAY: block; BACKGROUND: url(../vbv/images/icon_open.gif) no-repeat left top; WIDTH: 56px; TEXT-INDENT: -100000em; HEIGHT: 17px
+}

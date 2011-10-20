@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<global>
+		<models>
+			<!-- Declare the "example_profiler" class-group -->
+			<example_profiler>
+				<class>Example_Profiler_Model</class>
+			</example_profiler>
+		</models>
+	</global>
+	<frontend>
+		<events>
+			<!-- Register the observer for the profiling -->
+			<controller_front_send_response_after>
+				<observers>
+					<example_profiler>
+						<type>model</type>
+						<class>example_profiler/observer</class>
+						<method>controllerFrontSendResponseAfter</method>
+					</example_profiler>
+				</observers>
+			</controller_front_send_response_after>
+		</events>
+	</frontend>
+</config>

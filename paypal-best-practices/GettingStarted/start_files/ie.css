@@ -1,0 +1,48 @@
+.thrColFixHdr #sidebar2 {
+	PADDING-TOP: 30px
+}
+.thrColFixHdr #sidebar1 {
+	PADDING-TOP: 30px
+}
+.thrColFixHdr #mainContent {
+	ZOOM: 1
+}
+#fileNotFoundPage #mainContent UL LI FIELDSET {
+	HEIGHT: 25px
+}
+TD.rightPanel UL {
+	MARGIN: 0px
+}
+LI {
+	MARGIN: 0px
+}
+#emailPreferenceContainer INPUT#emailPreference {
+	FLOAT: left
+}
+FIELDSET#shipMethodsSidebar DIV {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 1em; PADDING-TOP: 1em
+}
+TD.rightPanel FIELDSET LEGEND {
+	DISPLAY: block
+}
+TABLE#thanksHeader TD {
+	PADDING-BOTTOM: 10px
+}
+#ccLogo .ccLogoHolder A IMG {
+	MARGIN-TOP: 5px
+}
+#ccLogo .last.ccLogoHolder A IMG {
+	MARGIN-TOP: 0px
+}
+#checkoutPanelsHolder .availableGiftOpt IMG {
+	MARGIN: 0px
+}
+#checkoutPanelsHolder FIELDSET#billingShipping SELECT {
+	WIDTH: 154px
+}
+.checkoutPrinterFriendly .rightPanel .rightRailFieldsetHolder {
+	PADDING-TOP: 0.5em
+}
+#ccLogo .ccLogoHolder_NHLCA {
+	BORDER-RIGHT: #eee 1px solid; PADDING-RIGHT: 160px; DISPLAY: inline-block; PADDING-LEFT: 160px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; POSITION: relative
+}

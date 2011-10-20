@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0047)http://www.nautica.com/include/entry_footer.jsp -->
+<!--Preview TimeZone = 'null' --><!--Preview TimeZone = 'America/New_York' --><!-- Checking storemanPD --><!-- Checking productPreviewAllowed --><HTML 
+xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE></TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<SCRIPT type=text/javascript>
+<!--
+	function checklength(val) {
+		if(val.length == 0) return false;
+		for(var j=val.length;j > 0;j--) {
+			if(val.charAt(j-1) != ' ') {
+				return true;
+			}
+		}
+		return false;
+	}
+	function emailCheck(val) {
+	var EmailOk  = true
+	var Temp     = val;
+	var AtSym    = Temp.indexOf('@')
+	var Period   = Temp.lastIndexOf('.')
+	var Space    = Temp.indexOf(' ')
+	var Length   = Temp.length - 1   // Array is from 0 to length-1
+
+		if ((AtSym < 1) ||                     // '@' cannot be in first position
+	    (Period <= AtSym+1) ||             // Must be atleast one valid char btwn '@' and '.'
+	    (Period == Length ) ||             // Must be atleast one valid char after '.'
+	    (Space  != -1))                    // No empty spaces permitted
+	 	{
+	    	  return false;
+	 	}
+	   	return true;
+	}
+	function valForm(frm) {
+		if(!emailCheck(frm.elements['emailAddress'].value)) {
+			alert("Please enter a valid email address.");
+			if(!document.layers) frm.elements['emailAddress'].style.backgroundColor='#F9FD8B';
+			frm.elements['emailAddress'].focus();
+			return false;
+		}
+		if(frm.elements['emailAddress'].value!=frm.elements['confirmEmailAddress'].value) {
+			alert("Please confirm your email address.");
+			if(!document.layers) {
+				frm.elements['confirmEmailAddress'].style.backgroundColor='#F9FD8B';
+			}
+			frm.elements['confirmEmailAddress'].focus();
+			return false;
+		}
+		return true;
+	}
+//-->
+</SCRIPT>
+<LINK href="entry_footer_files/nau.css" type=text/css rel=stylesheet>
+<STYLE type=text/css>BODY {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; BACKGROUND: #fff; PADDING-BOTTOM: 0px; MARGIN: 6px 0px 0px; COLOR: #001a39; PADDING-TOP: 0px; TEXT-ALIGN: left
+}
+</STYLE>
+
+<META content="MSHTML 6.00.6000.17102" name=GENERATOR></HEAD>
+<BODY>
+<FORM name=emailForm onsubmit="return valForm(this)" 
+action=/emailHandler/index.jsp method=post><INPUT type=hidden value=Y 
+name=emailPref> <INPUT type=hidden value=nau_emailsignup name=contest> <INPUT 
+type=hidden name=emailTrack> <INPUT type=hidden 
+value=/include/entry_thanks_footer.jsp name=targetPage> <INPUT type=hidden 
+value="October 11, 2011 7:46:54 PM EDT" name=datetime> <INPUT id=emailAddress 
+style="PADDING-RIGHT: 0px; PADDING-LEFT: 3px; FONT-SIZE: 10px; PADDING-BOTTOM: 2px; MARGIN: 6px 0px; WIDTH: 131px; PADDING-TOP: 3px" 
+onclick="javacript:if(document.emailForm.emailAddress.value == 'Enter email address'){document.emailForm.emailAddress.value='';}" 
+value="Enter email address" name=emailAddress> <BR><INPUT id=confirmEmailAddress 
+style="PADDING-RIGHT: 0px; PADDING-LEFT: 3px; FONT-SIZE: 10px; PADDING-BOTTOM: 2px; MARGIN: 6px 0px 10px; WIDTH: 131px; PADDING-TOP: 3px" 
+onclick="javascript:if(document.emailForm.confirmEmailAddress.value == 'Confirm email address'){document.emailForm.confirmEmailAddress.value='';}" 
+value="Confirm email address" name=confirmEmailAddress> <BR>
+<DIV id=entryMLCancel><A 
+onclick="parent.document.getElementById('joinmailinglistfooter').style.backgroundColor='#001A39';javascript:parent.nau.pgComponents.toggleiFrame('emailFrame1','-100','-100','-100');" 
+href="javascript:parent.nau.pgComponents.toggleVisibility('emailDivOnFooter','hidden','hidden','hidden');"><IMG 
+src="entry_footer_files/email_cancel.gif" align=absMiddle border=0></A></DIV>
+<DIV id=entryMLJoin><INPUT type=image src="entry_footer_files/email_join.gif" 
+align=absMiddle border=0></DIV><BR clear=all>
+<DIV id=entryPrivacyPolicy><A 
+href="javascript:void(window.open('../helpdesk/popup.jsp?display=safety&amp;subdisplay=privacy&amp;clickid=email_privacy_txt','getfile1','width=500,height=400,toolbar=no,status=no,menubar=no,scrollbars=yes,resizable=yes'));">Privacy 
+Policy</A> </DIV></FORM></BODY></HTML>

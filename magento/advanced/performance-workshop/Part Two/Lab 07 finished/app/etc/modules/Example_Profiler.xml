@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Example_Profiler>
+			<active>true</active>
+			<codePool>local</codePool>
+		</Example_Profiler>
+	</modules>
+</config>
